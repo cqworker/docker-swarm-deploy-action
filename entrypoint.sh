@@ -24,7 +24,6 @@ if [ ${INPUT_REMOTE_HOST#"ssh://"} != "$INPUT_REMOTE_HOST" ]; then
     echo "Registering SSH keys..."
 
     # Save private key to a file and register it with the agent.
-    lsb_release -a 
     mkdir -p "$HOME/.ssh"
     printf '%s' "$INPUT_SSH_PRIVATE_KEY" > "$HOME/.ssh/docker"
     cat $HOME/.ssh/docker
